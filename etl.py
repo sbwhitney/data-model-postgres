@@ -2,6 +2,7 @@ import os
 import glob
 import psycopg2
 import pandas as pd
+from psycopg2.extensions import AsIs
 from sql_queries import *
 
 
@@ -13,7 +14,7 @@ def process_song_file(cur, filepath):
     song_data = df.iloc[0, [7,8,0,9,5]].values.tolist()
     song_data[3] = song_data[3].item()
     cur.execute(song_table_insert, song_data)
-    
+
     # insert artist record
     artist_data = df.iloc[0, [0,4,2,1,3]].values.tolist()
     cur.execute(artist_table_insert, artist_data)
@@ -28,7 +29,7 @@ def process_log_file(cur, filepath):
 
     # convert timestamp column to datetime
     t = pd.to_datetime(df['ts'])
-    
+
     # insert time data records
     time_data = (t, t.dt.hour, t.dt.day, t.dt.week, t.dt.month, t.dt.year, t.dt.weekday)
     column_labels = ('timestamp', 'hour', 'day', 'week', 'month', 'year', 'weekday')
@@ -46,18 +47,18 @@ def process_log_file(cur, filepath):
 
     # insert songplay records
     for index, row in df.iterrows():
-        
+
         # get songid and artistid from song and artist tables
         cur.execute(song_select, (row.song, row.artist, row.length))
         results = cur.fetchone()
-        
+
         if results:
             songid, artistid = results
         else:
             songid, artistid = None, None
 
         # insert songplay record
-        songplay_data = (index, row['ts'], row['userId'], row['level'], songid, artistid, row['sessionId'], row['location'],         row['userAgent'])
+        songplay_data = (AsIs('DEFAULT'), row['ts'], row['userId'], row['level'], songid, artistid, row['sessionId'], row['location'], row['userAgent'])
         cur.execute(songplay_table_insert, songplay_data)
 
 
