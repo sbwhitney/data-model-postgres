@@ -16,7 +16,7 @@ song_data/A/A/B/TRAABJL12903CDCF1A.json
 
 And below is an example of what a single song file, TRAABJL12903CDCF1A.json, looks like.
 
-{"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}
+`{"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}`
 
 # Log Dataset
 
@@ -33,22 +33,22 @@ The star schema is the simplest style of data mart schema and is the approach mo
 
 Here is an example query and results used for song play analysis:
 
-SELECT * FROM songplays LIMIT 5;
+`SELECT * FROM songplays LIMIT 5;`
 
-songplay_id 	start_time 	user_id 	level 	song_id 	artist_id 	session_id 	location 	user_agent
+```songplay_id 	start_time 	user_id 	level 	song_id 	artist_id 	session_id 	location 	user_agent
 0 	1542845032796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 1 	1542845350796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 2 	1542845526796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 3 	1542845741796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
-4 	1542846220796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
+4 	1542846220796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"```
 
-To create the database and tables, run:
+To create the database and tables, run:`
 
-python create_tables.py
+`python create_tables.py`
 
 To initiate the ETL process, run:
 
-python etl.py
+`python etl.py`
 
 To test tables, open:
 
