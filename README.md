@@ -47,8 +47,9 @@ songplay_id 	start_time 	user_id 	level 	song_id 	artist_id 	session_id 	locatio
 3 	1542845741796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 4 	1542846220796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 ```
-Run `create_tables.py` to create your database and tables.
 
-Run `test.ipynb` to confirm the creation of your tables with the correct columns.
+1. Run `create_tables.py` to create your database and tables.
 
-Run `etl.py` to process the entire datasets.
+2. Run `test.ipynb` to confirm the creation of your tables with the correct columns.
+
+3. Run `etl.py` to process the entire datasets.
