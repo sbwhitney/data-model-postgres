@@ -39,12 +39,14 @@ Here is an example query and results used for song play analysis:
 
 `SELECT * FROM songplays LIMIT 5;`
 
+```
 songplay_id 	start_time 	user_id 	level 	song_id 	artist_id 	session_id 	location 	user_agent
 0 	1542845032796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 1 	1542845350796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 2 	1542845526796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 3 	1542845741796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 4 	1542846220796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
+```
 
 To create the database and tables, run:
 
