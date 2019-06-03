@@ -42,7 +42,7 @@ Here is an example query and results used for song play analysis:
 3 	1542845741796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"
 4 	1542846220796 	15 	paid 	None 	None 	818 	Chicago-Naperville-Elgin, IL-IN-WI 	"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"```
 
-To create the database and tables, run:`
+To create the database and tables, run:
 
 `python create_tables.py`
 
