@@ -3,7 +3,11 @@ from sql_queries import create_table_queries, database_drop, database_create, dr
 
 
 def create_database():
-    """Create database."""
+    """This procedure establishs connection to default database. It then drops/creates a database.
+
+    Returns:
+        The cursor and connection variables.
+    """
     # connect to default database
     conn = psycopg2.connect("host=127.0.0.1 dbname=studentdb user=student password=student")
     conn.set_session(autocommit=True)
@@ -24,21 +28,31 @@ def create_database():
 
 
 def drop_tables(cur, conn):
-    """Drop tables."""
+    """This procedure drops tables from the database.
+
+    Args:
+        cur: the cursor variable
+        conn: the connection variable
+    """
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
-    """Create tables."""
+    """This procedure creates tables in the database.
+
+    Args:
+        cur: the cursor variable
+        conn: the connection variable
+    """
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def main():
-    """Main block. Run drop/create helper functions."""
+    """This procedure calls the database drop/create functions."""
     cur, conn = create_database()
 
     drop_tables(cur, conn)
