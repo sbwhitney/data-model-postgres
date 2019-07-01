@@ -10,14 +10,14 @@ time_table_drop = "DROP TABLE IF EXISTS time;"
 
 songplay_table_create = ("""CREATE TABLE songplays (
 songplay_id SERIAL PRIMARY KEY,
-start_time bigint,
-user_id text,
-level text,
+start_time BIGINT,
+user_id TEXT,
+level TEXT,
 song_id TEXT,
 artist_id TEXT,
-session_id int,
-location text,
-user_agent text
+session_id INT,
+location TEXT,
+user_agent TEXT
 );
 
 CREATE SEQUENCE songplay_id_seq;
@@ -27,40 +27,40 @@ OWNED BY songplays.songplay_id;
 """)
 
 user_table_create = ("""CREATE TABLE users (
-user_id text PRIMARY KEY,
-first_name text,
-last_name text,
-gender text,
-level text
+user_id TEXT PRIMARY KEY,
+first_name TEXT,
+last_name TEXT,
+gender TEXT,
+level TEXT
 );
 """)
 
 song_table_create = ("""CREATE TABLE songs (
-song_id text PRIMARY KEY,
-title text,
-artist_id text NOT NULL,
-year int,
-duration decimal
+song_id TEXT PRIMARY KEY,
+title TEXT,
+artist_id TEXT NOT NULL,
+year INT,
+duration DECIMAL
 );
 """)
 
 artist_table_create = ("""CREATE TABLE artists (
-artist_id text PRIMARY KEY,
-name text,
-location text,
-latitude text,
-longitude text
+artist_id TEXT PRIMARY KEY,
+name TEXT,
+location TEXT,
+latitude TEXT,
+longitude TEXT
 );
 """)
 
 time_table_create = ("""CREATE TABLE time (
-start_time timestamp PRIMARY KEY,
-hour int,
-day int,
-week int,
-month int,
-year int,
-weekday int
+start_time TIMESTAMP PRIMARY KEY,
+hour INT,
+day INT,
+week INT,
+month INT,
+year INT,
+weekday INT
 );
 """)
 
